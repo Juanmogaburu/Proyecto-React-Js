@@ -1,10 +1,21 @@
-import "./App.css";
-import ButtonComponent from "./components/ButtonComponent/buttonComponent";
+import { useEffect, useState } from "react";
+import NavBarComponent from "./components/NavBarComponent/NavBarComponent"
+import "./index.css"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App(){
-  return (
+import { useAllProducts } from "./hooks/useProducts";
+
+
+function App (){
+
+
+  const { Products } = useAllProducts(3);
+
+  return ( 
     <div>
-      <ButtonComponent />
+      <NavBarComponent />
+      <ItemListContainer productsData = {Products} />
     </div>
   );
 }

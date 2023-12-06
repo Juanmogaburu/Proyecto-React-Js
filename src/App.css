@@ -1,42 +1,63 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.ftprin{
+    width: 100%;
+    width: 1263px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+img {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.fotosindex{
+    display: flex;
+    justify-content: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.fotoca{
+    width: 800px;
+    height: 400px;
+    margin-top: 100px;
+}
+.divfu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fotofu{
+    width: 400px;
+    height: 400px;
+    margin-top: 150px;
+    margin-left: 110px;
+    margin-right: 110px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.fotofi{
+    width: 800px;
+    height: 400px;
+    margin-top: 150px;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.tx{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Audiowide', sans-serif;
+    color: black;
 }
