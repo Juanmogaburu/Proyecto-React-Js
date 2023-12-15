@@ -10,12 +10,12 @@ import { useAllProducts } from "./hooks/useProducts";
 function App (){
 
 
-  const { Products } = useAllProducts(3);
+  const { products } = useAllProducts(3);
 
   return ( 
     <div>
       <NavBarComponent />
-      <ItemListContainer productsData = {Products} />
+      <ItemListContainer productsData = {products} />
     </div>
   );
 }

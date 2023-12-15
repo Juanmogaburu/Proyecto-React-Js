@@ -19,17 +19,17 @@ const ItemListContainer = ({productsData}) => {
             console.log(res);
        })
        .catch((err) => {
-            console.error(err);
+            console.log(err);
        });
 
        return (
         <div>
-          {productsData.map((Products) => (
-            <Card key={Products.id} style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Products.image} />
+          {productsData.map((products) => (
+            <Card key={products.id} style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={products.image} />
               <Card.Body>
-                <Card.Title>{Products.title}</Card.Title>
-                <Card.Text>{Products.description}</Card.Text>
+                <Card.Title>{products.title}</Card.Title>
+                <Card.Text>{products.description}</Card.Text>
               </Card.Body>
             </Card>
           ))}
